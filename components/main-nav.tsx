@@ -9,6 +9,8 @@ const MainNav = () => {
         <li><Link to="/overview">GAIA Software Overview</Link></li>
         <li><Link to="/qiskit">Collaborate with Qiskit</Link></li>
         <li><Link to="/vqd">VQD</Link></li>
+        <li><Link to="/docker-kubernetes">Docker and Kubernetes</Link></li>
+        <li><Link to="/additional-integrations">Additional Integrations</Link></li>
       </ul>
     </nav>
   );
