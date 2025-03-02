@@ -15551,30 +15551,7 @@ Para ver gráficos interactivos, visita nuestra [Visualización de Datos](https:
 1. **Haz un Fork del repositorio**.
 2. **Crea una Rama para tu contribución**:
 
-   ```bash
-   git checkout -b feature/nueva-funcionalidad
-   ```
 
-3. **Realiza tus Cambios** y asegúrate de seguir las guías de estilo del proyecto.
-4. **Envía un Pull Request**, describiendo cómo benefician tus cambios al proyecto.
-
-Consulta el archivo [CONTRIBUTING.md](./CONTRIBUTING.md) para más detalles.
-
----
-
-## 📖 Documentación Técnica
-
-Consulta recursos adicionales:
-
-- 📘 [Perceptron Cuántico](./docs/perceptron.md)
-- 📗 [Filtro de Kalman](./docs/kalman_filter.md)
-- 📊 [Visualización de Datos](./docs/visualizacion.md)
-
----
-
-## 📜 Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](./LICENSE) para más información.
 
 ---
 
