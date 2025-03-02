@@ -38,6 +38,7 @@ const Layout = ({ children }) => {
           </ul>
           <p>GAIA Software is designed to revolutionize the field of quantum computing by providing a comprehensive and integrated solution for quantum application development and deployment.</p>
           <p>Be sure to collaborate with Qiskit for enhanced quantum computing capabilities.</p>
+          <p>VQD (Variational Quantum Deflation) is a new feature in this release, providing advanced quantum optimization techniques.</p>
         </section>
       </footer>
     </div>
