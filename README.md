@@ -1,6 +1,4 @@
-
-
-# GAIA PORTFOLIO 🚀 - Quantum-Enhanced Aviation Solutions
+# GAIA PORTFOLIO  - Quantum-Enhanced Aviation Solutions
 
 ## Overview
 
