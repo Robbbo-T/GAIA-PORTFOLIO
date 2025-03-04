@@ -14,7 +14,7 @@ ident:
   infoCode: 001  # System Description
   infoCodeVariant: A
   itemLocationCode: 00
-  language: EN-US
+  language: STE
 applicability: AMPEL360XWLRGA
 status: final
 security: proprietary - GAIA AIR Internal Use Only
