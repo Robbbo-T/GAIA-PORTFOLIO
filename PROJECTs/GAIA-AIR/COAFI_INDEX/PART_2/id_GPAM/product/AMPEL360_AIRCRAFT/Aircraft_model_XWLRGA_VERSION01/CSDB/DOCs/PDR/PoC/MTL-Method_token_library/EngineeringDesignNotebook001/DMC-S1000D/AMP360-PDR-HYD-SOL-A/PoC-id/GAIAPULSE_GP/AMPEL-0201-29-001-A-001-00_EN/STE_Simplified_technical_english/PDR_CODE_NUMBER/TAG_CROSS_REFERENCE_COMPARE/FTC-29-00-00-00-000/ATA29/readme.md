@@ -292,7 +292,7 @@ Interfaces with:
 *   CMM (Component Maintenance Manuals): For individual components.
 *   IPC (Illustrated Parts Catalog): Provides parts breakdowns and illustrations.
 *   Vendor Specifications: Datasheets, installation manuals, and service bulletins.
-*   **PDR Code Numbering and Tagging Methodology:**  Refer to the document [PDR Code Numbering and Tag Cross-Reference Explanation](PDR_CODE_NUMBER/TAG_CROSS_REFERENCE_COMPARE/FTC-29-00-00-00-000/ATA29/readme.md) for a detailed explanation of the code numbering and tag cross-referencing system used within this PDR documentation set. This document explains the structure and purpose of codes like `GPAM-AMPEL-0201-29-001-A` and tags used for traceability and configuration management.
+- [PDR Code Numbering and Tagging Methodology](PDR_CODE_NUMBER/TAG_CROSS_REFERENCE_COMPARE/FTC-29-00-00-00-000/ATA29/readme.md): This document explains the structure and cross-referencing of our PDR codes (e.g., GPAM-AMPEL-0201-29-001-A), including details on tag usage, requirements traceability, and configuration management. (Released V01)
 
 #### 29.8.2 Applicable Normatives
 - **COAFI Part 0:** GAIA AIR Foundation & Governance.
