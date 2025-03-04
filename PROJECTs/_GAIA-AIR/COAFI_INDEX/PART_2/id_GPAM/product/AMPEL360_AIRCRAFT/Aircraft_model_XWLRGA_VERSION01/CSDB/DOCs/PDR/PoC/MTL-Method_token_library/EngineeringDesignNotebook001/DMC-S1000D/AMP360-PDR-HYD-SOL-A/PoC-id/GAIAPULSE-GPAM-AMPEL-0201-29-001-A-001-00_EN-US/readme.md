@@ -1,5 +1,6 @@
+
 ---
-dmc: DMC-GAIAPULSE-GPAM-AMPEL-0201-29-001-A-001-00_EN-US
+dmcCode: DMC-GAIAPULSE-GPAM-AMPEL-0201-29-001-A-001-00_EN-US
 ident:
   dmCode: GPAM-AMPEL-0201-29-001-A
   modelIdentCode: AMPEL360
@@ -379,12 +380,12 @@ Key sensors include:
 *Example:* A rapid drop in flow rate combined with rising pressure fluctuations may indicate early pump wear.
 
 **B. AI Model Selection and Training**  
-1. **Supervised Learning:**  
-   - Algorithms: Random Forest, XGBoost, Neural Networks (RNN/LSTM), SVM  
-2. **Unsupervised Learning:**  
-   - Techniques: Autoencoders, K-Means Clustering, Isolation Forest  
-3. **Reinforcement Learning:**  
-   - Optimize pump operation through continuous feedback
+- **Supervised Learning:**  
+  - Algorithms: Random Forest, XGBoost, Neural Networks (RNN/LSTM), SVM  
+- **Unsupervised Learning:**  
+  - Techniques: Autoencoders, K-Means Clustering, Isolation Forest  
+- **Reinforcement Learning:**  
+  - Optimize pump operation through continuous feedback
 
 **C. Training Pipeline and Failure Prediction**  
 - Collect real-time and historical sensor data  
@@ -633,4 +634,6 @@ This Data Module is designed for integration within the GAIA AIR COAFI documenta
 
 *End of Document*
 ```
+
+Feel free to adjust any sections as necessary for your project specifics.
 
