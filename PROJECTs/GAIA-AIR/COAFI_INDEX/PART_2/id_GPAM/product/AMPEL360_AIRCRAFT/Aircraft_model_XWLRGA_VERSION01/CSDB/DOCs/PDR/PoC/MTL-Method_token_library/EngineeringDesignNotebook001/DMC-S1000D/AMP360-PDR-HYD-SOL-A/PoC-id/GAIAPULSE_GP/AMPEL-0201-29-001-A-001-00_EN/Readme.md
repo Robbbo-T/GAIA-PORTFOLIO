@@ -1,4 +1,4 @@
-
+<dModule>
 ---
 dmCode: DMC-GAIAPULSE-GPAM-AMPEL-0201-29-001-A-001-00_EN-US
 ident:
@@ -22,6 +22,15 @@ responsiblePartnerCompany: GAIAPULSE
 originator: Amedeo Pelliccia & AI Collaboration
 date: 2025-02-26
 ---
+
+## Version History
+
+| Version | Date       | Description                                                                   | Author                              |
+|---------|------------|-------------------------------------------------------------------------------|-------------------------------------|
+| 1.0     | 2025-02-26 | Initial creation of the document header and draft.                          | Amedeo Pelliccia & AI Collaboration |
+| 1.0     | 2025-02-27 | Finalization and publication; document content updated to reflect approval.  | Amedeo Pelliccia & AI Collaboration |
+| 1.1     | 2025-04-03 | Updated version history to clarify date differences and include latest revisions. | Amedeo Pelliccia & AI Collaboration |
+
 
 # GPAM-AMPEL-0201-29-001-A  
 **AMPEL360XWLRGA Hydraulic System (ATA 29)**
