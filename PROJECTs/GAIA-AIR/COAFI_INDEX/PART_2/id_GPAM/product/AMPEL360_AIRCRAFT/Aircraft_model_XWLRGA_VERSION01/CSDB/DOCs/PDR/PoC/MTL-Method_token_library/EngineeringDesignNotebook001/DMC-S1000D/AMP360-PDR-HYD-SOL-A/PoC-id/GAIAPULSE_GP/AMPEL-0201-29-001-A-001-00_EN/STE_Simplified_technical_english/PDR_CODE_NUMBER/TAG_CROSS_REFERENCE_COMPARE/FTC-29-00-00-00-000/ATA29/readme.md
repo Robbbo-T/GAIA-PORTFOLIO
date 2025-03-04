@@ -294,33 +294,6 @@ Interfaces with:
 *   Vendor Specifications: Datasheets, installation manuals, and service bulletins.
 *   **PDR Code Numbering and Tagging Methodology:**  Refer to the document [PDR Code Numbering and Tag Cross-Reference Explanation](PDR_CODE_NUMBER/TAG_CROSS_REFERENCE_COMPARE/FTC-29-00-00-00-000/ATA29/readme.md) for a detailed explanation of the code numbering and tag cross-referencing system used within this PDR documentation set. This document explains the structure and purpose of codes like `GPAM-AMPEL-0201-29-001-A` and tags used for traceability and configuration management.
 
-**Explanation of the Integration:**
-
-*   **Location:**  We are placing the link within "29.8.1 Technical Documentation" because this new `readme.md` is itself a piece of technical documentation *about* the PDR documentation system. It's not a normative standard or a user manual, but rather an explanatory document.
-*   **Link Text:**  The link text "PDR Code Numbering and Tagging Methodology" clearly describes what the linked document is about.  You can adjust this text to be even more specific if needed (e.g., "Explanation of PDR Code Structure and Cross-Referencing Tags").
-*   **Markdown Link:**  We use a standard markdown link `[Link Text](relative/path/to/readme.md)`.
-*   **Relative Path:** The path `PDR_CODE_NUMBER/TAG_CROSS_REFERENCE_COMPARE/FTC-29-00-00-00-000/ATA29/readme.md` is a *relative path* assuming that your main `readme.md` file and the new `readme.md` are in the directory structure you provided.  **Ensure this relative path is correct based on your actual file organization.**  If they are in different repositories or you are hosting the documents online, you might need to use a different type of link (e.g., absolute URL if hosted online).
-*   **Explanatory Sentence:** The sentence following the link provides context, explaining *why* this document is linked and what kind of information readers will find there.  It mentions the purpose of the codes and tags (traceability, configuration management) and gives an example of a code (`GPAM-AMPEL-0201-29-001-A`).
-
-**Benefits of this Approach:**
-
-*   **Organization:** Keeps the main PDR document focused on the technical description of the Hydraulic System, while placing the documentation about the coding system in a dedicated, linked document.
-*   **Discoverability:** Readers of the main PDR document who need to understand the code numbering or tagging system can easily find the explanation in the "References" section.
-*   **Maintainability:** If you update the code numbering system or tagging methodology, you only need to update the dedicated `readme.md` file in `/PDR_CODE_NUMBER/...`. You don't need to modify the main PDR document extensively.
-*   **Best Practice:**  It's a best practice in documentation to separate descriptive content from meta-documentation (documentation about the documentation itself).
-
-**Next Steps:**
-
-1.  **Copy and paste** the markdown code snippet above into the "29.8 References and Related Documents" section of your main `readme.md` file.
-2.  **Verify the relative path** `PDR_CODE_NUMBER/TAG_CROSS_REFERENCE_COMPARE/FTC-29-00-00-00-000/ATA29/readme.md` is correct in your file system. Adjust it if necessary.
-3.  **Create the `readme.md` file** at the path `/PDR_CODE_NUMBER/TAG_CROSS_REFERENCE_COMPARE/FTC-29-00-00-00-000/ATA29/readme.md` and **document your PDR code numbering and tag cross-referencing methodology within that file.**  Explain things like:
-    *   The structure of codes like `GPAM-AMPEL-0201-29-001-A` (what each part means - project code, aircraft model, system code, document type, revision, etc.).
-    *   The types of tags you are using (e.g., for requirements traceability, test case linking, component identification).
-    *   Examples of how tags are used and cross-referenced.
-    *   The purpose of the `FTC-29-00-00-00-000` and `ATA29` directory names (likely related to Functional Test Cases and ATA chapter).
-
-By implementing this approach, you'll have a well-structured and easily navigable documentation set, with clear explanations of both the technical design and the documentation system itself!
-
 #### 29.8.2 Applicable Normatives
 - **COAFI Part 0:** GAIA AIR Foundation & Governance.
 - **COAFI Part I:** GAIA PULSE ID.
