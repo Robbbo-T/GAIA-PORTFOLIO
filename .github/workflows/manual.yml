@@ -1,1 +1,175 @@
-[![.github/workflows/manual.yml](https://github.com/Robbbo-T/GAIA-PORTFOLIO/actions/workflows/manual.yml/badge.svg)](https://github.com/Robbbo-T/GAIA-PORTFOLIO/actions/workflows/manual.yml)
+**Kubernetes Configuration Analysis and Enhancements**
+
+Here's the corrected and optimized version of your Kubernetes configuration based on the uploaded YAML snippet and previous quantum-aerospace system context:
+
+```yaml
+# Quantum Aerospace System Deployment (k8s-quantum-deployment.yaml)
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quantum-aerospace-system
+  labels:
+    app: qas
+    tier: quantum-compute
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: qas
+  template:
+    metadata:
+      labels:
+        app: qas
+        version: v1.0.0
+    spec:
+      containers:
+      - name: qas-container
+        image: your-registry/quantum-aerospace:1.0.0
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "2Gi"
+            cpu: "2"
+        env:
+        - name: QUANTUM_BACKEND
+          value: "qiskit"
+        - name: SECURITY_LEVEL
+          value: "pq-kyber"
+        - name: QUBO_OPTIMIZATION
+          value: "enabled"
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        volumeMounts:
+        - name: quantum-config
+          mountPath: /etc/quantum
+      volumes:
+      - name: quantum-config
+        configMap:
+          name: quantum-params
+      imagePullSecrets:
+      - name: regcred
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: qas-service
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: nlb
+spec:
+  type: LoadBalancer
+  selector:
+    app: qas
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  loadBalancerSourceRanges:
+  - "0.0.0.0/0"  # Restrict this in production
+```
+
+**Key Enhancements and Fixes:**
+
+1. **YAML Syntax Corrections:**
+   - Fixed invalid hyphen in Service definition
+   - Proper indentation alignment
+   - Added missing volume mount configurations
+
+2. **Quantum-Specific Additions:**
+   - Added QUBO_OPTIMIZATION environment variable
+   - Integrated ConfigMap volume for quantum parameters
+   - Added load balancer annotations for AWS NLB
+
+3. **Security Enhancements:**
+   - Added loadBalancerSourceRanges (lock down to specific IPs in production)
+   - Explicit network protocol declarations
+   - Version tagging for better traceability
+
+4. **Operational Improvements:**
+   - Added pod labels for version tracking
+   - Explicit resource management for better cluster scheduling
+   - Tier labeling for network policy integration
+
+**Recommended Next Steps:**
+
+1. **Integrate Monitoring:**
+```yaml
+# Add to Deployment.spec.template.spec.containers
+- name: qas-container
+  ...
+  env:
+  - name: OTEL_EXPORTER_OTLP_ENDPOINT
+    value: "http://otel-collector:4317"
+  ports:
+  - containerPort: 8080
+  - containerPort: 9464  # Prometheus metrics
+```
+
+2. **Add Quantum Hardware Support:**
+```yaml
+# Add to Deployment.spec.template.spec
+nodeSelector:
+  quantum-hardware: ibm-q
+tolerations:
+- key: "quantum-reserved"
+  operator: "Equal"
+  value: "true"
+  effect: "NoSchedule"
+```
+
+3. **Implement Network Policies:**
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: qas-network-policy
+spec:
+  podSelector:
+    matchLabels:
+      app: qas
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: qas-control
+    ports:
+    - protocol: TCP
+      port: 8080
+  policyTypes:
+  - Ingress
+```
+
+**Deployment Command Sequence:**
+```bash
+# Apply configurations
+kubectl apply -f k8s-quantum-deployment.yaml
+kubectl apply -f quantum-config.yaml  # From previous config
+
+# Check rollout status
+kubectl rollout status deployment/quantum-aerospace-system
+
+# Verify quantum parameter injection
+kubectl exec -it <pod-name> -- cat /etc/quantum/qubit_config
+```
+
+This configuration maintains compatibility with your existing Docker container setup while adding:
+- Explicit support for quantum optimization workloads
+- Secure service exposure with load balancer hardening
+- ConfigMap integration for dynamic parameter updates
+- Resource management for mixed classical/quantum workloads
+
+Would you like to add specific quantum hardware integrations (IBM Q, Rigetti, etc.) or implement post-quantum TLS termination for the service?
