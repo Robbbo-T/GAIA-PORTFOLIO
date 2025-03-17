@@ -9,7 +9,7 @@ GAIA PORTFOLIO is a comprehensive suite of **quantum-enhanced aviation solutions
 
 This document provides a high-level overview of the GAIA PORTFOLIO, highlighting its key components, technical architecture, features, and pathways for getting started and contributing.
 
-![GAIA Portfolio Architecture](https://placeholder.com/gaia-architecture.png)
+![mermaid-ai-diagram-2025-03-17-194010](https://github.com/user-attachments/assets/72f65431-518b-41b5-8b94-a28a097570f0)
 _**Conceptual Architecture:** GAIA PORTFOLIO Integrating Quantum and Classical Systems_
 
 ## 🌟 Key Components
